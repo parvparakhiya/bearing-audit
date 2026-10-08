@@ -1,0 +1,33 @@
+{
+  "criterion": "protocol C, 4-class: mean macro-F1 >= 0.9 and every class recall >= 0.8",
+  "candidates": [
+    {
+      "model": "forest",
+      "passed": false,
+      "mean_macro_f1": 0.7323579279394329,
+      "min_macro_f1": 0.9,
+      "worst_class": "OR",
+      "worst_recall": 0.4666666666666667,
+      "min_recall": 0.8
+    },
+    {
+      "model": "rule_fixed_band",
+      "passed": false,
+      "mean_macro_f1": 0.603076234388007,
+      "min_macro_f1": 0.9,
+      "worst_class": "B",
+      "worst_recall": 0.19166666666666668,
+      "min_recall": 0.8
+    },
+    {
+      "model": "rule_sk_band",
+      "passed": false,
+      "mean_macro_f1": 0.6034293592598322,
+      "min_macro_f1": 0.9,
+      "worst_class": "B",
+      "worst_recall": 0.2,
+      "min_recall": 0.8
+    }
+  ],
+  "ship": false
+}

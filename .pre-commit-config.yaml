@@ -1,0 +1,29 @@
+# pip install -e ".[dev]" && pre-commit install   (runs on every commit)
+# reports/ holds generated results; CI checks they are byte-identical to a
+# fresh pipeline run, so no hook may ever rewrite them.
+exclude: ^reports/
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files # the CWRU recordings must never be committed
+        args: ["--maxkb=1024"]
+      - id: check-merge-conflict
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.11
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: local # use the project's own mypy and environment, same as CI
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: python -m mypy
+        language: system
+        pass_filenames: false
+        files: ^src/

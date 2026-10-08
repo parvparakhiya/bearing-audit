@@ -1,0 +1,292 @@
+{
+  "gate_criterion": {
+    "max_false_alarm_rate": 0.0,
+    "min_detection_rate": 0.9,
+    "min_diagnosis_precision": 0.95,
+    "min_coverage": 0.5
+  },
+  "cost_model": {
+    "correct": 0.0,
+    "false_alarm": 1.0,
+    "undiagnosed": 1.0,
+    "wrong_type": 3.0,
+    "missed": 10.0
+  },
+  "systems": {
+    "forest": {
+      "recording_level": {
+        "false_alarm_rate": 0.0,
+        "detection_rate": 1.0,
+        "coverage": 0.9722222222222222,
+        "diagnosis_precision": 0.7428571428571429,
+        "cost_per_recording": 0.5833333333333334,
+        "outcomes": {
+          "correct": 38,
+          "false_alarm": 0,
+          "missed": 0,
+          "wrong_type": 9,
+          "undiagnosed": 1
+        },
+        "n_healthy": 12,
+        "n_faulty": 36
+      },
+      "window_level": {
+        "false_alarm_rate": 0.0,
+        "detection_rate": 1.0,
+        "coverage": 1.0,
+        "diagnosis_precision": 0.7083333333333334
+      },
+      "cost_sensitivity": {
+        "missed=5": 0.5833333333333334,
+        "missed=10": 0.5833333333333334,
+        "missed=20": 0.5833333333333334
+      },
+      "gate": {
+        "checks": {
+          "false_alarm_rate": true,
+          "detection_rate": true,
+          "diagnosis_precision": false,
+          "coverage": true
+        },
+        "passed": false
+      }
+    },
+    "rule": {
+      "recording_level": {
+        "false_alarm_rate": 0.0,
+        "detection_rate": 0.9166666666666666,
+        "coverage": 1.0,
+        "diagnosis_precision": 0.6363636363636364,
+        "cost_per_recording": 1.375,
+        "outcomes": {
+          "correct": 33,
+          "false_alarm": 0,
+          "missed": 3,
+          "wrong_type": 12,
+          "undiagnosed": 0
+        },
+        "n_healthy": 12,
+        "n_faulty": 36
+      },
+      "window_level": {
+        "false_alarm_rate": 0.17142857142857143,
+        "detection_rate": 0.9,
+        "coverage": 1.0,
+        "diagnosis_precision": 0.6578947368421053
+      },
+      "cost_sensitivity": {
+        "missed=5": 1.0625,
+        "missed=10": 1.375,
+        "missed=20": 2.0
+      },
+      "gate": {
+        "checks": {
+          "false_alarm_rate": true,
+          "detection_rate": true,
+          "diagnosis_precision": false,
+          "coverage": true
+        },
+        "passed": false
+      }
+    },
+    "forest_abstain": {
+      "recording_level": {
+        "false_alarm_rate": 0.0,
+        "detection_rate": 1.0,
+        "coverage": 0.8055555555555556,
+        "diagnosis_precision": 0.7241379310344828,
+        "cost_per_recording": 0.6458333333333334,
+        "outcomes": {
+          "correct": 33,
+          "false_alarm": 0,
+          "missed": 0,
+          "wrong_type": 8,
+          "undiagnosed": 7
+        },
+        "n_healthy": 12,
+        "n_faulty": 36
+      },
+      "window_level": {
+        "false_alarm_rate": 0.0,
+        "detection_rate": 1.0,
+        "coverage": 0.7861111111111111,
+        "diagnosis_precision": 0.7243816254416962
+      },
+      "cost_sensitivity": {
+        "missed=5": 0.6458333333333334,
+        "missed=10": 0.6458333333333334,
+        "missed=20": 0.6458333333333334
+      },
+      "gate": {
+        "checks": {
+          "false_alarm_rate": true,
+          "detection_rate": true,
+          "diagnosis_precision": false,
+          "coverage": true
+        },
+        "passed": false
+      }
+    },
+    "physics_diagnoser": {
+      "recording_level": {
+        "false_alarm_rate": 0.25,
+        "detection_rate": 1.0,
+        "coverage": 0.6944444444444444,
+        "diagnosis_precision": 0.6785714285714286,
+        "cost_per_recording": 0.6666666666666666,
+        "outcomes": {
+          "correct": 28,
+          "false_alarm": 3,
+          "missed": 0,
+          "wrong_type": 6,
+          "undiagnosed": 11
+        },
+        "n_healthy": 12,
+        "n_faulty": 36
+      },
+      "window_level": {
+        "false_alarm_rate": 0.2,
+        "detection_rate": 0.9833333333333333,
+        "coverage": 0.8418079096045198,
+        "diagnosis_precision": 0.7258064516129032
+      },
+      "cost_sensitivity": {
+        "missed=5": 0.6666666666666666,
+        "missed=10": 0.6666666666666666,
+        "missed=20": 0.6666666666666666
+      },
+      "gate": {
+        "checks": {
+          "false_alarm_rate": false,
+          "detection_rate": true,
+          "diagnosis_precision": false,
+          "coverage": true
+        },
+        "passed": false
+      }
+    }
+  },
+  "ship": false,
+  "physics_thresholds": [
+    {
+      "fold": 0,
+      "IR": 0.4209,
+      "IR_sb": 0.3574,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 1,
+      "IR": 0.4044,
+      "IR_sb": 0.4983,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 1.5662
+    },
+    {
+      "fold": 2,
+      "IR": 0.4209,
+      "IR_sb": 0.4983,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 3,
+      "IR": 0.4209,
+      "IR_sb": 0.4983,
+      "OR": 0.4283,
+      "B": 0.4214,
+      "kurtosis": 3.1014,
+      "crest": 4.9083,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 4,
+      "IR": 0.4209,
+      "IR_sb": 0.3574,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 5,
+      "IR": 0.4044,
+      "IR_sb": 0.4983,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 1.5662
+    },
+    {
+      "fold": 6,
+      "IR": 0.4209,
+      "IR_sb": 0.4983,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 7,
+      "IR": 0.4209,
+      "IR_sb": 0.4983,
+      "OR": 0.4283,
+      "B": 0.4214,
+      "kurtosis": 3.1014,
+      "crest": 4.9083,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 8,
+      "IR": 0.4209,
+      "IR_sb": 0.3574,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 9,
+      "IR": 0.4044,
+      "IR_sb": 0.4983,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 1.5662
+    },
+    {
+      "fold": 10,
+      "IR": 0.4209,
+      "IR_sb": 0.4983,
+      "OR": 0.5138,
+      "B": 0.5268,
+      "kurtosis": 3.1366,
+      "crest": 5.0298,
+      "sk_max": 2.175
+    },
+    {
+      "fold": 11,
+      "IR": 0.4209,
+      "IR_sb": 0.4983,
+      "OR": 0.4283,
+      "B": 0.4214,
+      "kurtosis": 3.1014,
+      "crest": 4.9083,
+      "sk_max": 2.175
+    }
+  ]
+}

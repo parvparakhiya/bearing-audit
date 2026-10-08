@@ -1,0 +1,17 @@
+# CWRU recordings are downloaded, never committed (see data/manifest.csv)
+data/raw/
+*.mat
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+.coverage
+coverage.xml
+htmlcov/

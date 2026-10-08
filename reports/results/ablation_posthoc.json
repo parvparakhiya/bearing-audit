@@ -1,0 +1,53 @@
+[
+  {
+    "features": "all features",
+    "protocol_C_mean_macro_f1": 0.7323579279394329,
+    "protocol_C_per_bearing": {
+      "B007": 1.0,
+      "B014": 1.0,
+      "B021": 0.65,
+      "IR007": 1.0,
+      "IR014": 0.325,
+      "IR021": 1.0,
+      "Normal": 1.0,
+      "OR007@6": 0.675,
+      "OR014@6": 0.0,
+      "OR021@6": 0.725
+    },
+    "bearing_identity_accuracy_protocol_B": 0.9746835443037974
+  },
+  {
+    "features": "time + spectral only",
+    "protocol_C_mean_macro_f1": 0.49953300464809414,
+    "protocol_C_per_bearing": {
+      "B007": 1.0,
+      "B014": 1.0,
+      "B021": 0.725,
+      "IR007": 0.075,
+      "IR014": 0.25,
+      "IR021": 1.0,
+      "Normal": 1.0,
+      "OR007@6": 0.0,
+      "OR014@6": 0.0,
+      "OR021@6": 0.0
+    },
+    "bearing_identity_accuracy_protocol_B": 0.959493670886076
+  },
+  {
+    "features": "envelope only",
+    "protocol_C_mean_macro_f1": 0.5144545154994071,
+    "protocol_C_per_bearing": {
+      "B007": 0.05,
+      "B014": 0.05,
+      "B021": 0.2,
+      "IR007": 1.0,
+      "IR014": 0.325,
+      "IR021": 1.0,
+      "Normal": 0.7619047619047619,
+      "OR007@6": 1.0,
+      "OR014@6": 0.0,
+      "OR021@6": 1.0
+    },
+    "bearing_identity_accuracy_protocol_B": 0.7848101265822784
+  }
+]

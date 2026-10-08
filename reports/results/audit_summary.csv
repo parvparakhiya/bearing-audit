@@ -1,0 +1,12 @@
+task,protocol,model,folds,mean_macro_f1,sd_macro_f1,pooled_accuracy,recall_Normal,recall_IR,recall_B,recall_OR
+type4,A_window_random,forest,5,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+type4,A_window_random,rule_fixed_band,5,0.65,0.05,0.668,0.8,1.0,0.283,0.683
+type4,A_window_random,rule_sk_band,5,0.58,0.026,0.646,0.686,1.0,0.217,0.708
+type4,B_leave_one_load_out,forest,4,0.994,0.011,0.992,1.0,1.0,1.0,0.975
+type4,B_leave_one_load_out,rule_fixed_band,4,0.645,0.055,0.668,0.8,1.0,0.283,0.683
+type4,B_leave_one_load_out,rule_sk_band,4,0.573,0.044,0.643,0.657,1.0,0.217,0.708
+type4,C_unseen_bearing,forest,12,0.732,0.217,0.774,1.0,0.775,0.883,0.467
+type4,C_unseen_bearing,rule_fixed_band,12,0.603,0.102,0.671,0.829,1.0,0.192,0.683
+type4,C_unseen_bearing,rule_sk_band,12,0.603,0.113,0.669,0.781,1.0,0.2,0.708
+type_size10,A_window_random,forest,5,0.997,0.005,0.997,,,,
+type_size10,B_leave_one_load_out,forest,4,0.974,0.04,0.975,,,,
