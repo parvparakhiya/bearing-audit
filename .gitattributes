@@ -1,0 +1,2 @@
+# count notebooks as documentation, so the language bar reflects the Python package
+*.ipynb linguist-documentation
