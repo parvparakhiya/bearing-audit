@@ -481,18 +481,21 @@ runs end to end. On that ARM machine every model result, prediction and gate
 verdict matched the committed files exactly. Four files of signal-processing
 values (`features.csv`, `physics_check.csv`, `physics_summary.csv`,
 `data_checks.json`) agree to about 12 significant digits, because the chip adds
-floating-point numbers in a different order. The committed results come from
-x86-64 Linux, the platform CI uses, so results regenerated on another kind of
-machine shouldn't be committed. The `docker` CI job builds the image and runs
-a smoke test on every push.
+floating-point numbers in a different order. Two different x86 processors can
+do the same, which is why CI compares numbers with a tolerance instead of byte
+for byte (below). The `docker` CI job builds the image and runs a smoke test on
+every push.
 
 Every result in this README is written to `reports/results/` by `make all`,
 which recomputes the features from the recordings. A CI job does exactly that
 on the real data with the pinned versions, and fails if any committed result
-changes (byte for byte) or any figure changes (pixel for pixel, with
-`scripts/compare_figures.py`, because the same image compresses to different
-PNG bytes on different machines). `--reuse-features` skips the feature step.
-Data provenance is documented in `data/PROVENANCE.md`.
+changes: labels, predictions and decisions must match exactly, and numbers to
+a relative 1e-9 (`scripts/compare_results.py`). Figures must match pixel for
+pixel (`scripts/compare_figures.py`), because the same image compresses to
+different PNG bytes on different machines. A real code change moves the numbers
+by far more than 1e-9; rounding on a different processor moves them by about
+1e-13. `--reuse-features` skips the feature step. Data provenance is documented
+in `data/PROVENANCE.md`.
 
 `fetch` tries the CWRU site first, then a public GitHub mirror, and only
 accepts a file if its checksum matches. The mirror path has been tested: a
@@ -519,6 +522,7 @@ notebooks/       bearing_audit_presentation.ipynb: the ten-minute tour
 data/            manifest.csv (SHA-256), PROVENANCE.md
 docs/            walkthrough.md: every step in plain words; industrial-preregistration.md
 reports/         results/ and figures/, all generated
+scripts/         compare_results.py and compare_figures.py, the checks CI runs after make all
 CHANGELOG.md, Dockerfile, .pre-commit-config.yaml, requirements-lock.txt
 ```
 
